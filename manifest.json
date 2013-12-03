@@ -23,7 +23,7 @@
    "content_scripts": [
       {
         "all_frames": true,        
-        "matches": ["https://*/*", "http://*/*"],
+        "matches": ["http://*/*","*://*/*"],
         "js": ["resources/jquery.min.js"]
       }
     ]
