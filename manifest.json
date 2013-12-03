@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
 
-  "name": "EverBoard",
+  "name": "LinkShare",
   "version": "0.0.1",
-  "description": "Gather Alumni Data Across the Web.",
+  "description": "ShareLinks online with groups.",
 
   "permissions": [
     "clipboardRead",
@@ -13,5 +13,18 @@
   "browser_action": {
     "default_icon": "icon.png",
     "default_popup": "popup.html"
-  }
+  },
+   "background":{
+        "scripts":[
+            "resources/jquery.min.js"
+            ],
+        "persistent": true
+    },
+   "content_scripts": [
+      {
+        "matches": ["https://*/*", "http://*/*"],
+        "js": ["toolbar.js"],
+        "run_at": "document_end"
+      }
+    ]
 }
