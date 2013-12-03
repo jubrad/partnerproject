@@ -24,7 +24,7 @@
       {
         "all_frames": true,        
         "matches": ["https://*/*", "http://*/*"],
-        "js": ["resources/jquery.min.js", "scripts/toolbar.js"]
+        "js": ["resources/jquery.min.js"]
       }
     ]
 }
