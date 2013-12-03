@@ -1,0 +1,10 @@
+#linnkshare-popup {
+	position: static;
+	top: 0;
+	height:100;
+	width: 100%;
+	background-color:green;
+}
+#linkshare-body{
+	visibility:0;
+}
