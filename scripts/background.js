@@ -5,7 +5,12 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 	});
 });
 
-
+// chrome.browserAction.onClicked.addListener(function(tab) {
+// 	chrome.tabs.executeScript(
+// 		tab.id, {
+// 		file: "resources/toolbar.css"
+// 	});
+// });
 
 chrome.browserAction.onClicked.addListener(function(tab) {
 	chrome.tabs.executeScript(
@@ -14,9 +19,3 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 	});
 });
 
-chrome.browserAction.onClicked.addListener(function(tab) {
-	chrome.tabs.executeScript(
-		tab.id, {
-		code: "console.log('linkshare button clicked')"
-	});
-});

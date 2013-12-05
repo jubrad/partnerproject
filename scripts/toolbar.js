@@ -2,12 +2,24 @@
 function setupLinkBar(){
 	console.log('setupLinkBar() has been called')
 	if($('#linkshare-toolbar').length  == 0 && document.location.protocol != "https:"){
-		$('body').prepend('<iframe id="linkshare-toolbar" style="z-index:100 " src="http://www.leekspin.com" width="100%" height="100"></iframe>');
-		// $('linkshare-toobar').
+
+		link = $(location).attr('href');
+
+		$('body').prepend("<iframe id=\"linkshare-toolbar\" src=\"http://linkshare-burstworks.herokuapp.com/shares/new?url=" + link + "\" seamless></iframe>");
+		$('#linkshare-toolbar').css({'position':'fixed','z-index':'10000','width':'100%','height':'100px','top': '0px' ,'left': '0px ','right':'0px ','overflow':'hidden ','margin-top':'0px','padding-top':'0px'});
+		$('#linkshare-toolbar').animate({'height': '100px'},300);
 	}
 	else{
-		$('#linkshare-toolbar').remove();
+		$('#linkshare-toolbar').slideUp(300,function(){
+			$(this).remove();
+		});
+		// $('#linkshare-toolbar').delay(1000).remove();
 	}
 }
 
 setupLinkBar();
+
+// 'width': "" + $(document).width()})
+
+
+		// $('body').prepend("<iframe id=\"linkshare-toolbar\" src=\"www.google.com/?url=\" " + pathname +" seamless></iframe>");
