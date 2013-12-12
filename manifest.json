@@ -26,5 +26,8 @@
         "matches": ["http://*/*","*://*/*"],
         "js": ["resources/jquery.min.js"]
       }
+    ],
+    "web_accessible_resources": [
+      "jquery.min.js"
     ]
 }
